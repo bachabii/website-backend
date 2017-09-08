@@ -3,13 +3,14 @@ var Schema = mongoose.Schema;
 
 var SkillSchema = new Schema({
     languages: {
-        proficient: [],
-        familiar: []
+        proficient: [String],
+        familiar: [String]
     },
     software: {
-        database: [],
-        platforms: []
-    }
+        database: [String],
+        platforms: [String]
+    },
+    timestamps: true
 });
 
 module.exports = mongoose.model('skill', SkillSchema);
