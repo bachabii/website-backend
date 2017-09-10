@@ -17,7 +17,8 @@ exports.params = (req, res, next, id) => {
 
 exports.get = (req, res, next) => {
     // TODO: Add Limit by 1 to the query after testing (maybe)
-    Skill.find({}, {sort: {updated_at: -1}})
+    // , {sort: {updated_at: -1}
+    Skill.find({})
         .then(skills => {
             res.json(skills);
         }, err => {
@@ -42,6 +43,17 @@ exports.put = (req, res, next) => {
             res.json(saved);
         }
     });
+};
+
+exports.post = (req, res, next) => {
+    var newSkill = req.body;
+
+    Skill.create(newSkill)
+        .then(skill => {
+            res.json(skill);
+        }, err => {
+            next(err);
+        });
 };
 
 exports.delete = (req, res, next) => {

@@ -1,11 +1,8 @@
 var router = require('express').Router();
 var logger = require('../../util/logger');
+var controller = require('./resumeController');
 
-// boilerplate
 router.route('/')
-    .get((req, res) => {
-        logger.log('Hey from resume');
-        res.send({ok: true});
-    });
+    .get(controller.get);
 
 module.exports = router;

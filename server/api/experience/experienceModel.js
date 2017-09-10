@@ -21,7 +21,8 @@ var ExperienceSchema = new Schema({
     accomplishments: {
         type: Schema.Types.ObjectId,
         ref: 'accomplishment'
-    },
+    }
+}, {
     timestamps: true
 });
 

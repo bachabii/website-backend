@@ -5,7 +5,8 @@ var AccomplishmentSchema = new Schema({
     accomplishments: {
         type: [String],
         required: true
-    },
+    }
+}, {
     timestamps: true
 });
 

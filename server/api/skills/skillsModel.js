@@ -9,7 +9,8 @@ var SkillSchema = new Schema({
     software: {
         database: [String],
         platforms: [String]
-    },
+    }
+}, {
     timestamps: true
 });
 

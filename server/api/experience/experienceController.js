@@ -18,7 +18,7 @@ exports.params = (req, res, next, id) => {
 };
 
 exports.get = (req, res, next) => {
-    Experience.find({}, {sort: {begin: -1}})
+    Experience.find({})
         .populate('accomplishments')
         .exec()
         .then(experiences => {
