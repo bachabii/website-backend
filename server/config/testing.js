@@ -1,6 +1,6 @@
 module.exports = {
-    logging: true,
+    logging: false,
     db: {
-        url: 'mongodb://localhost/nodeblog'
+        url: 'mongodb://localhost/nodeblog-test'
     }
 };

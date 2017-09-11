@@ -5,7 +5,11 @@ var config = {
     dev: 'development',
     test: 'testing',
     prod: 'production',
-    port: process.env.PORT || 3030
+    port: process.env.PORT || 3030,
+    expireTime: 24 * 60 * 10, //10 days
+    secrets: {
+        jwt: process.env.JWT || 'gumball'
+    }
 };
 
 // check to see if NODE_ENV was set, if not, set it to dev as default

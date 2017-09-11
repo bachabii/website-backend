@@ -19,6 +19,7 @@ exports.get = (req, res, next) => {
     // TODO: Add Limit by 1 to the query after testing (maybe)
     // , {sort: {updated_at: -1}
     Skill.find({})
+        .sort({'updatedAt': -1})
         .then(skills => {
             res.json(skills);
         }, err => {
