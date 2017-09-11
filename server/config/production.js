@@ -1,5 +1,5 @@
 module.exports = {
-    logging: false,
+    logging: true,
     db: {
         url: process.env.MONGODB_URI
     }
