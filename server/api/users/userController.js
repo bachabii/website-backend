@@ -50,7 +50,7 @@ exports.put = function(req, res, next) {
 exports.post = function(req, res, next) {
     var newUser = req.body;
 
-    newUser.save((err, use) => {
+    newUser.save((err, user) => {
         if (err) {
             return next(err);
         }
