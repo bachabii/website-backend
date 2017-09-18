@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var logger = require('../../util/logger');
-var controller = require('./skillController');
+var controller = require('./educationController');
 var auth = require('../../auth/auth');
 var checkUser = [auth.decodeToken(), auth.getFreshUser()];
 
@@ -13,6 +13,6 @@ router.route('/')
 router.route('/:id')
     .get(controller.getOne)
     .put(checkUser,controller.put)
-    .delete(checkUser,controller.delete);
+    .delete(controller.delete);
 
 module.exports = router;
