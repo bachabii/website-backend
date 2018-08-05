@@ -17,7 +17,7 @@ exports.params = (req, res, next, id) => {
 
 exports.get = (req, res, next) => {
     Accomplishment.find({})
-        .sort({'updatedAt': -1})
+        // .sort({'updatedAt': -1})
         .then(accomplishments => {
             res.json(accomplishments);
         }, err => {
