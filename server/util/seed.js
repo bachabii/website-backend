@@ -16,30 +16,41 @@ var users = [
 var accomplishments = [
     {
         accomplishments: [
-            "Developed code",
-            "Developed automation",
-            "Participated in code reviews"
+            "Participated in the Software Development Life Cycle process including requirements gathering, design, coding, testing, code reviews, debugging and maintenance",
+            "Developed reusable, generic web components using Polymer 2 that utilize event dispatching and bi-directional data binding",
+            "Contributed to the development effort to transition our product UI from Backbone to Polymer",
+            "Developed feature to intake company signed installation packages for a new platform and transform the package for the customer to download upon request using Node.js",
+            "Developed new API routes using Node.js for new features",
+            "Developed local API routes in Node.js to generate test data for developer testing",
+            "Developed Python framework tool to dynamically generate fully comprehensive result files for validating new audit analysis product feature which reduced file generation time from over 1 hour (manual) to less than 5 minutes (automated)",
+            "Automated backend and frontend test cases using Python framework and Selenium"
         ]
     },
     {
         accomplishments: [
-            "Developed test code",
-            "Reviewed test cases"
+            "Automated product test cases using in-house automation framework",
+            "Enhanced in-house automation framework to record test results in JIRA using Zephyr API (ZAPI)",
+            "Developed, implemented, and continuously improved a new hire boot camp training program",
+            "Coordinated testing activities, communicated testing status to management, and managed up to 8 testers across 3 company initiatives",
+            "Assisted in the planning process for project roadmaps, determination of priority lists, and calculation of estimated level of efforts for all projects",
+            "Product Owner for BETA, the in-house test automation framework",
+            "Tested enhancements and migration of multiple projects from traditional RDBMS to AWS implementation",
+            "Oversaw the training of FINRA QC procedures, tools, and best practices for newly established Chicago based QC team"
         ]
     }
 ];
 
 var experiences = [
     {
-        position: 'Software Engineer',
+        position: 'Software Development Engineer',
         company: 'Fireeye',
         begin: '08/2015',
         end: 'Present'
     },
     {
-        position: 'SDET',
+        position: 'Associate Tester II',
         company: 'FINRA',
-        begin: '07/2013',
+        begin: '01/2014',
         end: '07/2015'
     }
 ];

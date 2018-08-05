@@ -34,6 +34,8 @@ exports.put = (req, res, next) => {
 
     _.merge(accomplishment, update);
 
+    accomplishment.markModified('accomplishments');
+
     accomplishment.save((err, saved) => {
         if (err) {
             next(err);

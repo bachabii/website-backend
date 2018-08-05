@@ -37,6 +37,12 @@ exports.put = (req, res, next) => {
 
     _.merge(skill, update);
 
+    _.forEach(Object.keys(update), item => {
+        _.forEach(Object.keys(update[item]), itm => {
+            skill.markModified(`${item}.${itm}`);
+        });
+    });
+
     skill.save((err, saved) => {
         if(err) {
             next(err);

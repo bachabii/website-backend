@@ -45,6 +45,10 @@ exports.put = (req, res, next) => {
 
   _.merge(education, update);
 
+  _.forEach(Object.keys(update), item => {
+    education.markModified(`${item}`);
+  });
+
   education.save((err, saved) => {
     if (err) {
       next(err);

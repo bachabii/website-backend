@@ -38,6 +38,10 @@ exports.put = function(req, res, next) {
 
     _.merge(user, update);
 
+    _.forEach(Object.keys(update), item => {
+        user.markModified(`${item}`);
+    });
+
     user.save(function(err, saved) {
         if (err) {
             next(err);

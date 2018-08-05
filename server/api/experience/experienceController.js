@@ -37,6 +37,11 @@ exports.put = (req, res, next) => {
     var update = req.body;
 
     _.merge(experience, update);
+
+    _.forEach(Object.keys(update), item => {
+        experience.markModified(`${item}`);
+    });
+    
     experience.save((err, saved) => {
         if (err) {
             next(err);

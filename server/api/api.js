@@ -6,5 +6,6 @@ router.use('/experiences', require('./experience/experienceRoutes'));
 router.use('/accomplishments', require('./accomplishments/accomplishmentsRoutes'));
 router.use('/educations', require('./education/educationRoutes'));
 router.use('/resume', require('./resume/resumeRoutes'));
+router.use('/email', require('./emails/emailRoutes'));
 
 module.exports = router;

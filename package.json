@@ -10,6 +10,7 @@
   "author": "Ismael Bachabi",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.5.2",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.17.2",
     "colors": "^1.1.2",
