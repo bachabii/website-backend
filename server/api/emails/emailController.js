@@ -5,7 +5,7 @@ var sendMessage = function(topic, msg, res) {
     var amqpURL;
 
     if (process.env.NODE_ENV === 'production') {
-        amqpURL = process.env.RABBITMQ_BIGWIG_URL;
+        amqpURL = process.env.CLOUDAMQP_URL;
     } else {
         amqpURL = 'amqp://localhost';
     }
@@ -16,8 +16,8 @@ var sendMessage = function(topic, msg, res) {
             ch.sendToQueue(topic, new Buffer(msg));
             console.log(" [x] Sent %s", msg);
         });
-    res.json({ status: 'Email Send request sent!' });
-    // setTimeout(function() { conn.close(); process.exit(0) }, 500);
+        res.json({ status: 'Email Send request sent!' });
+        // setTimeout(function() { conn.close(); }, 60000);
     });
 }
 
@@ -32,13 +32,13 @@ exports.post = (req, res, next) => {
         if (!validEmail(JSON.parse(req.body).email)) {
             res.status(400).send('Invalid email!');
         } else {
-            sendMessage('hello_test', req.body, res);
+            sendMessage('website_email_service', req.body, res);
         }
     } else {
         if (!validEmail(req.body.email)) {
             res.status(400).send('Invalid email!');
         } else {
-            sendMessage('hello_test', JSON.stringify(req.body), res);
+            sendMessage('website_email_service', JSON.stringify(req.body), res);
         }
     }
     
