@@ -17,7 +17,7 @@ var sendMessage = function(topic, msg, res) {
             console.log(" [x] Sent %s", msg);
         });
         res.json({ status: 'Email Send request sent!' });
-        // setTimeout(function() { conn.close(); }, 60000);
+        setTimeout(function() { conn.close(); }, 60000);
     });
 }
 
